@@ -32,7 +32,7 @@ const Auth = () => {
 
         // const URL = 'http://localhost:5000/auth';
 
-        const URL = 'https://medify-chat-server.vercel.app';
+        const URL = 'https://medify-chat-server.vercel.app/auth';
 
         
         try {
