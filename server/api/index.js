@@ -16,7 +16,10 @@ const twilioClient = require('twilio')(accountSid, authToken);
 app.use(cors({
     origin: 'https://medify-chat.vercel.app', 
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  preflightContinue: false, // set to false by default
+  optionsSuccessStatus: 204
   }));
   
 app.use(express.json());
