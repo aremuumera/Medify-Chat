@@ -13,14 +13,12 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const messagingServiceSid = process.env.TWILIO_MESSAGING_SERVICE_SID;
 const twilioClient = require('twilio')(accountSid, authToken);
 
-// app.use(cors({
-//     origin: 'https://medify-chat.vercel.app', 
-//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-//     allowedHeaders: ['Content-Type', 'Authorization'],
-//     credentials: true,
-//   preflightContinue: false, // set to false by default
-//   optionsSuccessStatus: 204
-//   }));
+app.use(cors({
+    origin: 'https://medify-chat.vercel.app', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  }));
   
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
