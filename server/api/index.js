@@ -14,10 +14,11 @@ const messagingServiceSid = process.env.TWILIO_MESSAGING_SERVICE_SID;
 const twilioClient = require('twilio')(accountSid, authToken);
 
 const corsOptions ={
-    origin: ['https://medify-chat.vercel.app'],
+    origin: 'https://medify-chat.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
+    optionSuccessStatus:200
 }
 app.use(cors(corsOptions));
   
